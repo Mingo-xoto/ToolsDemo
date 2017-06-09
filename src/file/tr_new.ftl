@@ -17,7 +17,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>managerStatus</w:t>
+				<w:t>otherPicIds</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -35,7 +35,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>int</w:t>
+				<w:t>string</w:t>
 			</w:r>
 			<w:bookmarkStart w:id="0" w:name="_GoBack" />
 			<w:bookmarkEnd w:id="0" />
@@ -55,7 +55,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>管理员同步状态</w:t>
+				<w:t></w:t>
 			</w:r>
 		</w:p>
 	</w:tc>

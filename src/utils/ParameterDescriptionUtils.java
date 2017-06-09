@@ -88,7 +88,7 @@ public class ParameterDescriptionUtils {
 		String line = null;
 		String rp = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
 		// 读取返回实体dto的字段列表
-		String path = rp + "manage/MerchantDto.java";
+		String path = rp + "manage/AgencyDetailDto.java";
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
@@ -116,7 +116,7 @@ public class ParameterDescriptionUtils {
 		String line = null;
 		String rp = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
 		// 读取返回实体dto的字段列表
-		String path = rp + "manage/MerchantDto.java";
+		String path = rp + "manage/AgencyDetailDto.java";
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
@@ -153,6 +153,7 @@ public class ParameterDescriptionUtils {
 			break;
 		default:
 			finalType = type.toLowerCase();
+			finalType = finalType.replaceAll("<[a-zA-Z]+>", "");
 		}
 		return finalType;
 	}
