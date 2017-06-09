@@ -1,0 +1,72 @@
+account_identity	int		
+address	nvarchar(200)	200	详细地址
+agency_id	varchar(36)	36	机构ID
+amap_coordinate	varchar(50)	50	高德坐标
+area_id	varchar(36)	36	所在区县ID
+area_name	nvarchar(50)	50	所在区县
+audit_remark	nvarchar(200)	200	审核备注
+audit_status	int		审核状态：-1：待审核，1：审核通过，0：审核不通过
+baidu_coordinate	varchar(50)	50	百度坐标
+balance_account_type	int		结算账户类型
+bank_account_name	nvarchar(100)	100	开户名
+bank_account_no	varchar(30)	30	账户号
+bank_city_id	varchar(36)	36	开户行所在城市ID
+bank_city_name	nvarchar(50)	50	开户行所在城市
+bank_id	varchar(36)	36	开户行ID
+bank_name	nvarchar(50)	50	开户行
+bank_province_id	varchar(36)	36	开户行所在省份ID
+bank_province_name	nvarchar(50)	50	开户行所在省份
+branch_bank_id	varchar(36)	36	分支行ID
+branch_bank_name	nvarchar(50)	50	分支行
+certificate_code	varchar(50)	50	组织机构代码
+city_id	varchar(36)	36	所在城市ID
+city_name	nvarchar(50)	50	所在城市
+company_type	int		企业类型：1：企业，2：个体户
+connector	nvarchar(50)	50	关系人
+connector_id_card	nvarchar(50)	50	关系人身份证号
+connector_type	int		企业类型：1：法人，2：实际控制人，3：代理人，0：其他
+corporation_email	varchar(100)	100	法人联系邮箱
+corporation_license_begin_time	datetime		法人证件有效期开始时间
+corporation_license_coutry	nvarchar(50)	50	法人证件国别
+corporation_license_end_time	datetime		法人证件有效期结束时间
+corporation_license_no	varchar(50)	50	法人证件号码
+corporation_license_type	int		法人证件类型
+corporation_name	nvarchar(50)	50	法人姓名
+corporation_phone	nvarchar(50)	50	法人联系电话
+corporation_sex	bit		法人性别
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+customer_service_phone	nvarchar(50)	50	
+director	nvarchar(50)	50	渠道负责人
+director_phone	nvarchar(50)	50	负责人手机号
+financial_contact	nvarchar(50)	50	财务联系人
+financial_contact_phone	nvarchar(50)	50	财务联系电话
+hierarchy	int		渠道层级
+id	varchar(36)	36	渠道ID
+industry_id	varchar(36)	36	渠道行业ID
+is_delete	bit		删除状态位
+license_begin_time	datetime		渠道证件有效开始时间
+license_end_time	datetime		渠道证件有效结束时间
+license_no	varchar(50)	50	证件号码
+license_type	int		证件类型
+manager_status	int		管理员同步状态;同步完成：1,同步失败：-2,同步中：null 或者 -1
+name	nvarchar(100)	100	渠道名称
+opening_begin_time	varchar(20)	20	开始营业时间
+opening_end_time	varchar(20)	20	接收营业时间
+parent_id	varchar(36)	36	父渠道ID
+pay_sys_code	varchar(50)	50	
+phone	nvarchar(50)	50	联系电话
+platform_code	varchar(50)	50	平台编号
+province_id	varchar(36)	36	所在省份ID
+province_name	nvarchar(50)	50	所在省份
+role_code	int		渠道角色编码
+signboard	nvarchar(100)	100	招牌名
+simple_name	nvarchar(100)	100	渠道简称
+status	int		状态
+summary	nvarchar(200)	200	渠道简介
+supplement_type	int		补充标识：-1：待补充，1：已补充
+sync_status	int		同步状态;同步完成：1,同步失败：-2,同步中：-1
+tax_no	varchar(50)	50	税务登记证编号
+tips	nvarchar(200)	200	提示信息
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人

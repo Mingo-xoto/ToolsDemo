@@ -1,0 +1,948 @@
+I	Table agency
+I.1	List of columns of the table agency
+Code	Data Type	Length	Comment
+agency_no	nvarchar(50)	50	
+area_id	varchar(36)	36	所在区县ID
+area_name	nvarchar(50)	50	所在区县名称
+balance_account_no	varchar(50)	50	结算账号
+bank_account_name	nvarchar(100)	100	开户名
+bank_city_id	varchar(36)	36	开户行所在城市ID
+bank_city_name	nvarchar(50)	50	开户行所在城市名称
+bank_id	varchar(36)	36	开户行ID
+bank_name	nvarchar(50)	50	开户行名称
+bank_province_id	varchar(36)	36	开户行所在省份ID
+bank_province_name	nvarchar(50)	50	开户行所在省份名称
+branch_bank_id	varchar(36)	36	分支行ID
+branch_bank_name	nvarchar(50)	50	分支行名称
+certificate_code	varchar(50)	50	组织机构代码
+city_id	varchar(36)	36	所在城市ID
+city_name	nvarchar(50)	50	所在城市名称
+code	int		
+contact_email	varchar(100)	100	联系邮箱
+contact_name	nvarchar(50)	50	联系人
+contact_phone	nvarchar(50)	50	联系电话
+corporation_id_card_no	varchar(50)	50	法人身份证号
+corporation_name	nvarchar(50)	50	企业法人
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+full_name	nvarchar(100)	100	机构全称
+hierarchy	int		机构层级
+id	varchar(36)	36	ID
+is_delete	bit		是否删除
+license_begin_date	datetime		证件有效开始日期
+license_end_date	datetime		证件有效结束日期
+license_no	varchar(50)	50	证件号码
+license_type	int		证件类型,其中1是身份证;2是普通营业执照;3是社会信用证;0是其它证件
+need_balance	bit		
+parent_id	varchar(36)	36	父机构ID
+platform_code	varchar(50)	50	平台编号
+province_id	varchar(36)	36	所在省份ID
+province_name	nvarchar(50)	50	所在省份名称
+simple_name	nvarchar(100)	100	机构简称
+status	int		状态
+sync_status	int		同步状态;同步完成：1,同步失败：-2,同步中：-1
+tax_no	varchar(50)	50	税务登记证编号
+tips	nvarchar(200)	200	提示信息
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+II	Table agency_extend
+II.1	List of columns of the table agency_extend
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+id	varchar(36)	36	ID
+ttg_manager_id	varchar(50)	50	TTG_管理员ID
+ttg_open_id	varchar(50)	50	TTG_Open_Id
+
+III	Table app_auth_token
+III.1	List of columns of the table app_auth_token
+Code	Data Type	Length	Comment
+app_auth_token	varchar(40)	40	
+app_refresh_token	varchar(40)	40	
+appid	varchar(100)	100	
+create_time	datetime		
+create_user	varchar(50)	50	
+expires_in	numeric(16)	16	
+id	varchar(36)	36	
+is_delete	bit		
+pay_channel_id	varchar(36)	36	
+pid	varchar(100)	100	
+re_expires_in	numeric(16)	16	
+update_time	datetime		
+update_user	varchar(50)	50	
+
+IV	Table area
+IV.1	List of columns of the table area
+Code	Data Type	Length	Comment
+area_code	varchar(20)	20	区域代码
+area_name	nvarchar(50)	50	区域名称
+area_type	int		区域类型
+id	varchar(36)	36	
+is_delete	bit		是否删除
+parent_code	varchar(20)	20	父区域代码
+
+V	Table attachment
+V.1	List of columns of the table attachment
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+extend_field1	sysname		扩展字段1
+extend_field2	sysname		扩展字段2
+id	varchar(36)	36	id
+is_delete	bit		删除标识：0.否, 1.是
+link_url	nvarchar(2048)	2,048	证件Url
+name	sysname		文件Key对应名称
+relate_id	varchar(36)	36	关联ID
+relate_type	int		关联类型
+sort	int		排序
+status	int		状态：0.禁用, 1.启用
+suffix	varchar(50)	50	文件后缀（不带点）
+thumbnail_url	nvarchar(2048)	2,048	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+VI	Table callback_cashier
+VI.1	List of columns of the table callback_cashier
+Code	Data Type	Length	Comment
+cashier_name	nvarchar(50)	50	收银员名字
+cashier_phone	varchar(11)	11	收银员手机号码
+create_time	datetime		
+create_user	varchar(50)	50	
+data_provider	varchar(20)	20	数据提供人：ttg-淘淘谷\ant-蚂蚁医疗
+id	varchar(36)	36	
+shop_no	varchar(50)	50	门店编号
+update_time	datetime		
+update_user	varchar(50)	50	
+
+VII	Table cashier
+VII.1	List of columns of the table cashier
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	
+create_time	datetime		
+create_user	varchar(36)	36	
+email	varchar(100)	100	
+id	varchar(36)	36	
+is_delete	bit		
+login_name	nvarchar(50)	50	
+login_pwd	varchar(128)	128	
+phone	varchar(18)	18	
+real_name	varchar(100)	100	
+shop_id	varchar(36)	36	
+status	int		
+sync_status	int		
+update_time	datetime		
+update_user	varchar(36)	36	
+
+VIII	Table cashier_role_ref
+VIII.1	List of columns of the table cashier_role_ref
+Code	Data Type	Length	Comment
+cashier_id	varchar(36)	36	
+create_time	datetime		
+create_user	varchar(36)	36	
+id	varchar(36)	36	
+is_delete	bit		
+shop_role_id	varchar(36)	36	
+update_time	datetime		
+update_user	varchar(36)	36	
+
+IX	Table contract_plan_ref_history
+IX.1	List of columns of the table contract_plan_ref_history
+Code	Data Type	Length	Comment
+active_date	date		
+agency_id	varchar(36)	36	
+contract_plan_ref_id	varchar(36)	36	
+create_time	datetime		
+create_user	varchar(50)	50	
+id	varchar(36)	36	
+is_delete	bit		
+merchant_contract_id	varchar(36)	36	
+merchant_id	varchar(36)	36	
+merchant_name	nvarchar(100)	100	
+service_plan_id	varchar(36)	36	
+update_time	datetime		
+update_user	varchar(50)	50	
+
+X	Table demo
+X.1	List of columns of the table demo
+Code	Data Type	Length	Comment
+create_time	datetime		
+id	char(36)	36	
+name	nvarchar(50)	50	
+
+XI	Table industry_category
+XI.1	List of columns of the table industry_category
+Code	Data Type	Length	Comment
+code	varchar(50)	50	行业代码
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		是否删除
+name	nvarchar(100)	100	行业名称
+parent_id	varchar(36)	36	父行业ID
+status	int		状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XII	Table merchant
+XII.1	List of columns of the table merchant
+Code	Data Type	Length	Comment
+account_identity	int		
+address	nvarchar(200)	200	详细地址
+agency_id	varchar(36)	36	机构ID
+amap_coordinate	varchar(50)	50	高德坐标
+area_id	varchar(36)	36	所在区县ID
+area_name	nvarchar(50)	50	所在区县
+audit_remark	nvarchar(200)	200	审核备注
+audit_status	int		审核状态：-1：待审核，1：审核通过，0：审核不通过
+baidu_coordinate	varchar(50)	50	百度坐标
+balance_account_type	int		结算账户类型
+bank_account_name	nvarchar(100)	100	开户名
+bank_account_no	varchar(30)	30	账户号
+bank_city_id	varchar(36)	36	开户行所在城市ID
+bank_city_name	nvarchar(50)	50	开户行所在城市
+bank_id	varchar(36)	36	开户行ID
+bank_name	nvarchar(50)	50	开户行
+bank_province_id	varchar(36)	36	开户行所在省份ID
+bank_province_name	nvarchar(50)	50	开户行所在省份
+branch_bank_id	varchar(36)	36	分支行ID
+branch_bank_name	nvarchar(50)	50	分支行
+certificate_code	varchar(50)	50	组织机构代码
+city_id	varchar(36)	36	所在城市ID
+city_name	nvarchar(50)	50	所在城市
+code	int		
+company_type	int		企业类型：1：企业，2：个体户
+connector	nvarchar(50)	50	关系人
+connector_id_card	nvarchar(50)	50	关系人身份证号
+connector_type	int		企业类型：1：法人，2：实际控制人，3：代理人，0：其他
+corporation_email	varchar(100)	100	法人联系邮箱
+corporation_license_begin_time	datetime		法人证件有效期开始时间
+corporation_license_coutry	nvarchar(50)	50	法人证件国别
+corporation_license_end_time	datetime		法人证件有效期结束时间
+corporation_license_no	varchar(50)	50	法人证件号码
+corporation_license_type	int		法人证件类型
+corporation_name	nvarchar(50)	50	法人姓名
+corporation_phone	nvarchar(50)	50	法人联系电话
+corporation_sex	bit		法人性别
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+customer_service_phone	nvarchar(50)	50	
+director	nvarchar(50)	50	渠道负责人
+director_phone	nvarchar(50)	50	负责人手机号
+financial_contact	nvarchar(50)	50	财务联系人
+financial_contact_phone	nvarchar(50)	50	财务联系电话
+hierarchy	int		渠道层级
+id	varchar(36)	36	渠道ID
+industry_id	varchar(36)	36	渠道行业ID
+is_delete	bit		删除状态位
+license_begin_time	datetime		渠道证件有效开始时间
+license_end_time	datetime		渠道证件有效结束时间
+license_no	varchar(50)	50	证件号码
+license_type	int		证件类型
+manager_status	int		管理员同步状态;同步完成：1,同步失败：-2,同步中：null 或者 -1
+name	nvarchar(100)	100	渠道名称
+opening_begin_time	varchar(20)	20	开始营业时间
+opening_end_time	varchar(20)	20	接收营业时间
+parent_id	varchar(36)	36	父渠道ID
+pay_sys_code	varchar(50)	50	
+phone	nvarchar(50)	50	联系电话
+platform_code	varchar(50)	50	平台编号
+province_id	varchar(36)	36	所在省份ID
+province_name	nvarchar(50)	50	所在省份
+role_code	int		渠道角色编码
+signboard	nvarchar(100)	100	招牌名
+simple_name	nvarchar(100)	100	渠道简称
+status	int		状态
+summary	nvarchar(200)	200	渠道简介
+supplement_type	int		补充标识：-1：待补充，1：已补充
+sync_status	int		同步状态;同步完成：1,同步失败：-2,同步中：-1
+tax_no	varchar(50)	50	税务登记证编号
+tips	nvarchar(200)	200	提示信息
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XIII	Table merchant_contract
+XIII.1	List of columns of the table merchant_contract
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+agency_name	nvarchar(100)	100	机构名称
+code	varchar(36)	36	合同编号
+contract_begin_date	datetime		合同生效日期
+contract_deduction_rate	decimal(18,6)	18	签约扣率
+contract_end_date	datetime		合同到期日期
+contract_profit_rate	decimal(18,6)	18	签约分润费率
+contract_sign_date	datetime		合同签署日期
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+deducation_max_amount	decimal(18,4)	18	扣费封顶金额
+id	varchar(36)	36	合同ID
+industry_type	varchar(36)	36	行业分类
+is_auto_renew	bit		是否自动续签
+is_delete	bit		是否删除
+merchant_contact_name	nvarchar(50)	50	商户联系人
+merchant_contact_phone	varchar(20)	20	商户联系人手机
+merchant_id	varchar(36)	36	商户ID
+merchant_name	nvarchar(100)	100	商户名称
+name	nvarchar(100)	100	合同名称
+pay_channel_id	varchar(36)	36	关联业务ID
+platform_code	varchar(50)	50	
+status	int		
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XIV	Table merchant_contract_history
+XIV.1	List of columns of the table merchant_contract_history
+Code	Data Type	Length	Comment
+active_date	date		
+agency_id	varchar(36)	36	
+agency_name	nvarchar(100)	100	
+contract_deduction_rate	decimal(18,6)	18	
+contract_id	varchar(36)	36	
+create_time	datetime		
+create_user	varchar(50)	50	
+deducation_max_amount	decimal(18,4)	18	
+id	varchar(36)	36	
+is_delete	bit		
+merchant_id	varchar(36)	36	
+merchant_name	nvarchar(100)	100	
+name	nvarchar(100)	100	
+pay_channel_id	varchar(36)	36	
+status	int		
+update_time	datetime		
+update_user	varchar(50)	50	
+
+XV	Table merchant_contract_service_plan_ref
+XV.1	List of columns of the table merchant_contract_service_plan_ref
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+id	varchar(36)	36	id
+is_delete	bit		是否删除
+merchant_contract_id	varchar(36)	36	商户合同ID
+merchant_id	varchar(36)	36	商户ID
+merchant_name	nvarchar(100)	100	商户名称
+service_plan_id	varchar(36)	36	服务方案ID
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XVI	Table merchant_function_ref
+XVI.1	List of columns of the table merchant_function_ref
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+function_code	int		功能代码
+id	varchar(36)	36	id
+is_delete	bit		删除状态位
+merchant_id	varchar(36)	36	渠道id
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XVII	Table merchant_receipt_type_ref
+XVII.1	List of columns of the table merchant_receipt_type_ref
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+merchant_id	varchar(36)	36	商户id
+receipt_type	int		收单类型：1：二维码，2： POS机
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+XVIII	Table merchant_source
+XVIII.1	List of columns of the table merchant_source
+Code	Data Type	Length	Comment
+code	varchar(50)	50	进件来源编码
+create_time	datetime		
+create_user	varchar(50)	50	
+id	varchar(36)	36	
+is_delete	bit		
+merchant_id	varchar(36)	36	商户ID
+source_type	int		进件来源类型：0=后台进件，1=微信进件
+update_time	datetime		
+update_user	varchar(50)	50	
+
+XIX	Table operation_log
+XIX.1	List of columns of the table operation_log
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+id	varchar(36)	36	
+operate_log	nvarchar(Max)		操作日志
+operate_type	int		操作日志:1.登录，2.登出，3.表操作
+real_name	nvarchar(50)	50	账户
+relate_biz_id	varchar(36)	36	关联业务ID
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+user_id	varchar(36)	36	
+
+XX	Table payment_biz_channel
+XX.1	List of columns of the table payment_biz_channel
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		删除状态位
+pay_biz_channel	varchar(255)	255	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXI	Table payment_channel
+XXI.1	List of columns of the table payment_channel
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构id
+app_secret	varchar(128)	128	
+appid	varchar(100)	100	appid
+certificate	varbinary(8000)	8,000	
+channel_merchant_no	varchar(36)	36	
+channel_mode	smallint		
+cost_rate	decimal(9,6)	9	
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		是否删除
+key_type	smallint		
+logo	varchar(255)	255	通道logo
+md5_key	varchar(512)	512	
+name	nvarchar(50)	50	通道名称
+pay_platform_id	varchar(36)	36	支付平台id
+pid	varchar(100)	100	pid
+private_key	varchar(4096)	4,096	
+public_key	varchar(4096)	4,096	
+status	int		通道状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXII	Table payment_channel_cost
+XXII.1	List of columns of the table payment_channel_cost
+Code	Data Type	Length	Comment
+channel_cost_rate	decimal(18,6)	18	通道成本率
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+industry_id	varchar(36)	36	收单行业分类id
+is_delete	bit		是否删除
+pay_channel_id	varchar(36)	36	通道id
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXIII	Table payment_channel_history
+XXIII.1	List of columns of the table payment_channel_history
+Code	Data Type	Length	Comment
+active_date	date		
+agency_id	varchar(36)	36	
+app_secret	varchar(128)	128	
+appid	varchar(100)	100	
+certificate	varbinary(8000)	8,000	
+channel_merchant_no	varchar(36)	36	
+channel_mode	smallint		
+cost_rate	decimal(18,6)	18	
+create_time	datetime		
+create_user	varchar(50)	50	
+id	varchar(36)	36	
+is_delete	bit		
+key_type	smallint		
+logo	varchar(255)	255	
+md5_key	varchar(512)	512	
+name	nvarchar(50)	50	
+pay_channel_id	varchar(36)	36	
+pay_platform_id	varchar(36)	36	
+pid	varchar(100)	100	
+private_key	varchar(4096)	4,096	
+public_key	varchar(4096)	4,096	
+status	int		
+update_time	datetime		
+update_user	varchar(50)	50	
+
+XXIV	Table payment_platform
+XXIV.1	List of columns of the table payment_platform
+Code	Data Type	Length	Comment
+code	varchar(36)	36	平台代码
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		是否删除
+logo	varchar(255)	255	平台logo
+name	nvarchar(30)	30	平台名称
+status	int		状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXV	Table plan_detail
+XXV.1	List of columns of the table plan_detail
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+id	varchar(36)	36	id
+is_default_profit_object	bit		
+is_delete	bit		是否删除
+plan_id	varchar(36)	36	方案ID
+profit_object_id	varchar(36)	36	分润方ID
+profit_object_name	nvarchar(100)	100	分润方名称
+profit_object_type	int		分润方类型（1：机构，2：服务商）
+profit_proportion	decimal(18,6)	18	分润占比（%）
+sort	int		
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XXVI	Table receipt_industry_category
+XXVI.1	List of columns of the table receipt_industry_category
+Code	Data Type	Length	Comment
+code	varchar(50)	50	行业代码
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		是否删除
+name	nvarchar(100)	100	行业名称
+parent_id	varchar(36)	36	父行业ID
+platform_type	int		平台标识：1.管理后台，2.终端POS，3.桌面终端，4.微信公众号
+status	int		状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXVII	Table receipt_industry_category_mapping
+XXVII.1	List of columns of the table receipt_industry_category_mapping
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+industry_code1	varchar(50)	50	一级行业代码
+industry_code2	varchar(50)	50	二级行业代码
+industry_code3	varchar(50)	50	三级行业代码
+industry_name1	nvarchar(100)	100	一级行业名称
+industry_name2	nvarchar(100)	100	二级行业名称
+industry_name3	nvarchar(100)	100	三级行业名称
+is_delete	bit		是否删除
+platform_type	int		平台类型
+   
+   1.支付宝
+   2.ttg
+   3.微信
+receipt_industry_category_id	varchar(36)	36	收单行业分类ID
+status	int		状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXVIII	Table receipt_rate
+XXVIII.1	List of columns of the table receipt_rate
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+contract_deduction_rate_max	decimal(18,6)	18	渠道签约扣率最大值
+contract_deduction_rate_min	decimal(18,6)	18	渠道签约扣率最小值
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+deducation_max_amount	decimal(18,4)	18	渠道扣费封顶（0为不封顶）
+id	varchar(36)	36	ID
+is_delete	bit		是否删除
+pay_channel_id	varchar(36)	36	支付通道ID
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXIX	Table relate_app
+XXIX.1	List of columns of the table relate_app
+Code	Data Type	Length	Comment
+app_id	varchar(36)	36	应用ID
+app_name	nvarchar(100)	100	应用名称
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+id	varchar(36)	36	ID
+is_delete	bit		删除标识：0.否, 1.是
+relate_biz_id	varchar(36)	36	关联业务ID
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+XXX	Table role_menu_ref
+XXX.1	List of columns of the table role_menu_ref
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+menu_id	varchar(36)	36	菜单id
+role_id	varchar(36)	36	角色id
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+XXXI	Table service_plan
+XXXI.1	List of columns of the table service_plan
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+hardware_provider_id	varchar(36)	36	
+hardware_provider_name	nvarchar(100)	100	
+id	varchar(36)	36	方案ID
+is_delete	bit		是否删除
+name	nvarchar(100)	100	方案名称
+plan_type	int		
+soft_provider_id	varchar(36)	36	
+soft_provider_name	nvarchar(100)	100	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XXXII	Table service_provider
+XXXII.1	List of columns of the table service_provider
+Code	Data Type	Length	Comment
+balance_account_no	varchar(50)	50	结算账号
+bank_account_name	nvarchar(100)	100	开户名
+bank_city_id	varchar(36)	36	开户行城市ID
+bank_city_name	nvarchar(100)	100	开户行城市名称
+bank_id	varchar(36)	36	开户行ID
+bank_name	nvarchar(100)	100	开户行名称
+bank_province_id	varchar(36)	36	开户行省份ID
+bank_province_name	nvarchar(100)	100	开户行省份名称
+branch_bank_id	varchar(36)	36	开户行分支行ID
+branch_bank_name	nvarchar(100)	100	开户行分支行名称
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+id	varchar(36)	36	id
+is_delete	bit		是否删除
+name	nvarchar(100)	100	服务商名称
+provider_type	int		1-软件服务商，2-硬件服务商，3-系统服务商
+remark	nvarchar(200)	200	
+short_name	nvarchar(100)	100	服务商简称
+status	int		状态
+sync_sys_code	int		
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XXXIII	Table shop_contract_ref
+XXXIII.1	List of columns of the table shop_contract_ref
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+contract_id	varchar(36)	36	合同ID
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建用户
+id	varchar(36)	36	id
+is_delete	bit		是否删除
+merchant_id	varchar(36)	36	
+shop_id	varchar(36)	36	门店ID
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新用户
+
+XXXIV	Table sync_status
+XXXIV.1	List of columns of the table sync_status
+Code	Data Type	Length	Comment
+id	varchar(36)	36	主键
+is_sync_to_oas	bit		是否已同步至OAS
+is_sync_to_pay	bit		是否已同步至支付系统
+is_sync_to_ttg	bit		是否已同步至TTG
+relate_biz_id	varchar(36)	36	业务表id
+sync_oas_time	datetime		同步至OAS时间
+sync_pay_time	datetime		同步至支付系统时间
+sync_ttg_time	datetime		同步至TTG时间
+
+XXXV	Table sync_task
+XXXV.1	List of columns of the table sync_task
+Code	Data Type	Length	Comment
+biz_type	int		业务类型
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+ctt_id	varchar(50)	50	合同编号
+data_type	int		
+error_count	int		错误次数
+id	varchar(36)	36	任务id
+is_decompose	bit		是否已分解
+is_delete	bit		是否删除
+msg_data	varchar(4000)	4,000	响应的的实际数据
+open_id	varchar(36)	36	
+operation_type	int		操作类型
+parent_id	varchar(36)	36	父任务id
+platform_name	nvarchar(100)	100	平台名称
+platform_type	int		平台类型
+relate_biz_id	varchar(36)	36	业务表id
+relate_type	int		关联类型
+request_msg	nvarchar(Max)		请求报文
+request_time	datetime		请求时间
+response_msg	varchar(8000)	8,000	响应报文
+response_time	datetime		响应时间
+status	int		状态
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXXVI	Table sync_tasks
+XXXVI.1	List of columns of the table sync_tasks
+Code	Data Type	Length	Comment
+biz_type	int		业务类型
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+ctt_id	varchar(50)	50	
+error_count	int		错误次数
+id	varchar(36)	36	任务id
+is_delete	bit		是否删除
+msg_data	varchar(4000)	4,000	响应的的实际数据
+need_sync_to_oas	bit		是否需要同步至OAS
+need_sync_to_pay	bit		是否需要同步至支付系统
+need_sync_to_ttg	bit		是否需要同步至TTG
+operation_type	int		操作类型
+parent_id	varchar(36)	36	父任务id
+relate_biz_id	varchar(36)	36	业务表id
+relate_type	int		关联类型
+request_msg	varchar(8000)	8,000	请求报文
+request_time	datetime		请求时间
+response_msg	varchar(8000)	8,000	响应报文
+response_time	datetime		响应时间
+status	int		状态
+sync_oas_status	int		同步至OAS状态
+sync_pay_status	int		同步至支付系统状态
+sync_ttg_status	int		同步至TTG状态
+tra_id	varchar(36)	36	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XXXVII	Table sys_menu
+XXXVII.1	List of columns of the table sys_menu
+Code	Data Type	Length	Comment
+code	varchar(64)	64	菜单编码
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+icon	varchar(500)	500	菜单图标
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+is_menu	bit		是否导航菜单
+is_system_menu	bit		是否系统管理菜单
+name	nvarchar(50)	50	菜单名称
+parent_id	varchar(36)	36	父菜单
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+remark	nvarchar(200)	200	角色描述
+sort	int		同一级下菜单的排序序号
+status	int		状态：0.禁用, 1.启用
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+url	varchar(100)	100	菜单地址
+
+XXXVIII	Table sys_menu_1
+XXXVIII.1	List of columns of the table sys_menu_1
+Code	Data Type	Length	Comment
+code	varchar(20)	20	菜单编码
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+icon	varchar(500)	500	菜单图标
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+is_menu	bit		是否导航菜单
+is_system_menu	bit		是否系统管理菜单
+name	nvarchar(50)	50	菜单名称
+parent_id	varchar(36)	36	父菜单
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+remark	nvarchar(200)	200	角色描述
+sort	int		同一级下菜单的排序序号
+status	int		状态：0.禁用, 1.启用
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+url	varchar(100)	100	菜单地址
+
+XXXIX	Table sys_role
+XXXIX.1	List of columns of the table sys_role
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+is_major_role	bit		是否超级管理员角色
+name	nvarchar(50)	50	角色名称
+platform_type	int		平台标识：1.账号角色，2.终端POS，3.桌面终端
+relate_biz_id	varchar(36)	36	关联业务ID
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+remark	nvarchar(200)	200	角色描述
+status	int		状态：0.禁用, 1.启用
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+XL	Table sys_user
+XL.1	List of columns of the table sys_user
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+email	varchar(100)	100	
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+last_login_ip	varchar(20)	20	最后登录ip
+last_login_time	datetime		最后登录时间
+login_pwd	varchar(128)	128	登录密码
+name	nvarchar(50)	50	账户名称
+oas_connector_id	varchar(36)	36	OAS关系人ID
+phone	varchar(18)	18	
+real_name	nvarchar(50)	50	姓名
+relate_biz_id	varchar(36)	36	关联业务ID
+relate_biz_type	int		关联业务类型 1机构；2渠道；3运营
+remark	nvarchar(200)	200	备注
+status	int		状态：0.禁用, 1.启用
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+
+XLI	Table sysdiagrams
+XLI.1	List of columns of the table sysdiagrams
+Code	Data Type	Length	Comment
+definition	varbinary(Max)		
+diagram_id	int		
+name	sysname		
+principal_id	int		
+version	int		
+
+XLII	Table table_3
+XLII.1	List of columns of the table table_3
+Code	Data Type	Length	Comment
+industry_code2	varchar(100)	100	
+industry_name1	nvarchar(100)	100	
+industry_name2	nvarchar(100)	100	
+
+XLIII	Table terminal_app
+XLIII.1	List of columns of the table terminal_app
+Code	Data Type	Length	Comment
+app_full_name	nvarchar(100)	100	
+app_name	nvarchar(50)	50	
+app_service_no	varchar(20)	20	
+app_url	varchar(100)	100	
+code	varchar(20)	20	
+create_time	datetime		
+create_user	varchar(50)	50	
+icon	varchar(500)	500	
+id	varchar(36)	36	
+is_delete	bit		
+remark	nvarchar(200)	200	
+sort	int		
+status	int		
+update_time	datetime		
+update_user	varchar(50)	50	
+
+XLIV	Table terminal_base_info
+XLIV.1	List of columns of the table terminal_base_info
+Code	Data Type	Length	Comment
+activate_time	datetime		激活时间
+active_status	bit		激活状态(0-未激活，1-已激活)
+add_time	datetime		增加机器时间
+address	nvarchar(300)	300	详细地址
+agent_name	nvarchar(50)	50	机构名称
+agent_no	varchar(50)	50	机构编号
+brand_name	nvarchar(50)	50	品牌名称
+cdkey	varchar(20)	20	激活码
+city	varchar(20)	20	市
+cityid	varchar(20)	20	门店所在地区
+county	varchar(20)	20	县
+create_time	datetime		
+create_user	varchar(50)	50	
+data_provider	varchar(20)	20	数据提供方：ttg、ant
+id	varchar(36)	36	
+install_date	datetime		装机时间(yyyy_mm_dd)
+installer_name	varchar(50)	50	装机人姓名
+is_delete	bit		
+mct_name	nvarchar(50)	50	商店名称
+mct_no	varchar(11)	11	商店编号
+province	varchar(20)	20	省
+remark	nvarchar(200)	200	备注
+shop_full_name	nvarchar(100)	100	门店全称
+shop_name	nvarchar(50)	50	门店简称
+shop_no	varchar(36)	36	门店编号
+status	varchar(1)	1	状态（0 未分配，1 已装机，2 已撤机，3 已分配待装机，4 已删除
+tml_code	varchar(50)	50	机器编码
+tml_no	varchar(50)	50	机器编号
+tml_type	varchar(50)	50	机器类型
+tra_id	varchar(30)	30	交易号
+uninstall_date	datetime		撤机时间（yyyy_mm_dd)
+uninstaller_name	varchar(50)	50	撤机人姓名
+upd_time	datetime		更新时间
+update_time	datetime		
+update_user	varchar(50)	50	
+
+XLV	Table terminal_contract_info
+XLV.1	List of columns of the table terminal_contract_info
+Code	Data Type	Length	Comment
+ctt_code	varchar(50)	50	收单合同编号
+ctt_id	varchar(50)	50	收单合同id
+pmt_mct_no	varchar(50)	50	收单机构商户号
+pmt_name	varchar(50)	50	付款方式名称
+pmt_tag	varchar(50)	50	支付标签
+pmt_tml_no	varchar(50)	50	收单机构终端号
+pmt_tml_type	varchar(50)	50	终端型号
+pmt_tml_types	varchar(1000)	1,000	终端型号列表，多个小写逗号分开
+tml_no	varchar(50)	50	
+
+XLVI	Table terminal_status_change_log
+XLVI.1	List of columns of the table terminal_status_change_log
+Code	Data Type	Length	Comment
+id	varchar(36)	36	
+opt_time	datetime		
+opt_type	int		操作类型  1-装机，2-撤机，3-分配，4-激活，5-删除
+remark	nvarchar(100)	100	
+tml_no	varchar(50)	50	终端机器编号
+
+XLVII	Table thirdparty_payment_platform
+XLVII.1	List of columns of the table thirdparty_payment_platform
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	
+is_delete	bit		是否删除
+payment_channel_id	varchar(36)	36	
+pmf_id	varchar(9)	9	
+pmt_id	varchar(9)	9	
+status	int		状态
+thirdparty_platform_code	int		
+thirdparty_platform_name	nvarchar(255)	255	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XLVIII	Table thirdparty_platform_biz_code
+XLVIII.1	List of columns of the table thirdparty_platform_biz_code
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建人
+id	varchar(36)	36	主键
+is_delete	bit		删除状态位
+is_synchronized	bit		
+platform_code	varchar(50)	50	
+platform_name	nvarchar(100)	100	
+platform_type	int		
+relate_biz_id	varchar(36)	36	
+sync_time	datetime		
+tra_id	varchar(36)	36	
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新人
+
+XLIX	Table user_role_ref
+XLIX.1	List of columns of the table user_role_ref
+Code	Data Type	Length	Comment
+create_time	datetime		创建时间
+create_user	varchar(50)	50	创建者
+id	varchar(36)	36	
+is_delete	bit		删除标识：0.否, 1.是
+role_id	varchar(36)	36	角色id
+update_time	datetime		更新时间
+update_user	varchar(50)	50	更新者
+user_id	varchar(36)	36	用户id
+
+L	Table wechat_code_agency_ref
+L.1	List of columns of the table wechat_code_agency_ref
+Code	Data Type	Length	Comment
+agency_id	varchar(36)	36	机构ID
+code	varchar(50)	50	进件来源编码
+create_time	datetime		
+create_user	varchar(50)	50	
+full_name	nvarchar(100)	100	机构全称
+id	varchar(36)	36	
+is_delete	bit		
+simple_name	nvarchar(100)	100	机构简称
+update_time	datetime		
+update_user	varchar(50)	50	
+
+LI	Table wechat_user_info
+LI.1	List of columns of the table wechat_user_info
+Code	Data Type	Length	Comment
+code	varchar(50)	50	进件来源编码
+create_time	datetime		
+create_user	varchar(50)	50	
+id	varchar(36)	36	
+is_delete	bit		
+is_online	bit		是否登录
+login_type	int		登录方式：1=账号登录，2=手机登录
+merchant_id	varchar(36)	36	登录关联的商户编号
+open_id	varchar(36)	36	微信open_id
+phone	varchar(18)	18	登录手机号
+update_time	datetime		
+update_user	varchar(50)	50	
+user_id	varchar(36)	36	登录用户ID
+
+ 
+
+
