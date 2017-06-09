@@ -32,7 +32,7 @@ public class TableUtils {
 		Connection conn = null;
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			conn = DriverManager.getConnection("jdbc:sqlserver://10.1.20.57:1433;databaseName=FOS_Manage;&characterEncoding=GBK", "FOS_Admin", "FOS_AdminAdmin");
+			conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1443;databaseName=root;&characterEncoding=GBK", "root", "root");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
