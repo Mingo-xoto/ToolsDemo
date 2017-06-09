@@ -17,7 +17,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>otherPicIds</w:t>
+				<w:t>remark</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>

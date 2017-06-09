@@ -32,7 +32,7 @@ public class TableUtils {
 		Connection conn = null;
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1443;databaseName=root;&characterEncoding=GBK", "root", "root");
+			conn = DriverManager.getConnection("jdbc:sqlserver://10.1.20.57:1433;databaseName=FOS_Manage;&characterEncoding=GBK", "FOS_Admin", "FOS_AdminAdmin");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -154,13 +154,12 @@ public class TableUtils {
 
 	public static void main(String[] args) throws Exception {
 		Map<String, TableInfo> tableInfoMap = getAllTableInfo();
-
 		File dir = new File("E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto");
 		listFile(dir, tableInfoMap);
 	}
 
 	/**
-	 * 遍历文件
+	 * 遍历文件并逐个给dto文件添加注释
 	 * 
 	 * @param file
 	 * @param tableInfoMap

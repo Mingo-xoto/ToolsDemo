@@ -63,10 +63,13 @@ public class ParameterDescriptionUtils {
 	}
 
 	public static void main(String[] args) throws IOException {
+		createReturnDataStructor("E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/manage/", "ServiceProviderDto.java");
+	}
+
+	public static void createReturnDataStructor(String rp, String dtoName) throws IOException, FileNotFoundException {
+		String path = rp + dtoName;
 		// 读取从数据库导出的表字段注释
-		Map<String, String> commentMap = createPropertyCommentMap();
-		// StringBuilder trs = readPropertyListOfBean(commentMap);
-		StringBuilder trs = readFullPropertyListOfBean();
+		StringBuilder trs = readFullPropertyListOfBean(rp, path);
 		Map<String, Object> map = new HashMap<>();
 		map.put("trs", trs.toString());
 		// 1、创建数据模型
@@ -74,21 +77,9 @@ public class ParameterDescriptionUtils {
 		fprint("ParameterDescription.ftl", map, "返回参数.doc");
 	}
 
-	/**
-	 * 读取bean的属性列表集合
-	 * 
-	 * @author HuaQi.Yang
-	 * @date 2017年6月7日
-	 * @param commentMap
-	 * @return
-	 * @throws FileNotFoundException
-	 * @throws IOException
-	 */
-	public static StringBuilder readPropertyListOfBean(Map<String, String> commentMap) throws FileNotFoundException, IOException {
+	public static StringBuilder readFullPropertyListOfBean(String rp, String path) throws FileNotFoundException, IOException {
 		String line = null;
-		String rp = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
 		// 读取返回实体dto的字段列表
-		String path = rp + "manage/AgencyDetailDto.java";
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
@@ -97,43 +88,14 @@ public class ParameterDescriptionUtils {
 			line = line.trim();
 			// 只筛选字段行
 			if ((line.startsWith("private") || line.startsWith("public")) && !line.endsWith("{") && line.indexOf("=") < 0) {
+				System.out.print(line);
 				String arrs[] = line.split(" ");
 				Map<String, Object> map = new HashMap<String, Object>();
 				// 2、为数据模型添加值
 				String property = arrs[2].split(";")[0];
 				map.put("property", property);
 				map.put("type", getType(arrs[1]));
-				String description = commentMap.get(property);
-				map.put("description", description == null ? "" : description);
-				trs.append(fprint("tr.ftl", map, "tr_new.ftl"));
-			}
-		}
-		br.close();
-		return trs;
-	}
-
-	public static StringBuilder readFullPropertyListOfBean() throws FileNotFoundException, IOException {
-		String line = null;
-		String rp = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
-		// 读取返回实体dto的字段列表
-		String path = rp + "manage/AgencyDetailDto.java";
-		File file = new File(path);
-		FileInputStream fis = new FileInputStream(file);
-		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-		StringBuilder trs = new StringBuilder();
-		while ((line = br.readLine()) != null) {
-			line = line.trim();
-			// 只筛选字段行
-			if ((line.startsWith("private") || line.startsWith("public")) && !line.endsWith("{") && line.indexOf("=") < 0) {
-				String arrs[] = line.split(" ");
-				Map<String, Object> map = new HashMap<String, Object>();
-				// 2、为数据模型添加值
-				String property = arrs[2].split(";")[0];
-				map.put("property", property);
-				map.put("type", getType(arrs[1]));
-				String infos[] = arrs[2].split(";");
-				String description = infos == null || infos.length < 2 ? "" : infos[1].replaceAll("//", "");
-				map.put("description", description);
+				map.put("description", arrs.length > 3 ? arrs[3] : "");
 				trs.append(fprint("tr.ftl", map, "tr_new.ftl"));
 			}
 		}
