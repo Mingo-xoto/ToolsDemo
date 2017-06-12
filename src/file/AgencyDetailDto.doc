@@ -161,7 +161,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>id</w:t>
+				<w:t>ID</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -184,7 +184,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>name</w:t>
+				<w:t>code</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -222,7 +222,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>服务商名称</w:t>
+				<w:t></w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -245,7 +245,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>shortName</w:t>
+				<w:t>agencyNo</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -283,7 +283,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>服务商简称</w:t>
+				<w:t></w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -306,7 +306,556 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>providerType</w:t>
+				<w:t>fullName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>机构全称</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>simpleName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>机构简称</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>platformCode</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>平台编号</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>provinceId</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在省份ID</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>provinceName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在省份名称</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>cityId</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在城市ID</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>cityName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在城市名称</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>areaId</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在区县ID</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>areaName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>所在区县名称</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>licenseType</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -344,7 +893,678 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>1-软件服务商，2-硬件服务商，3-系统服务商</w:t>
+				<w:t>证件类型,其中1是身份证;2是普通营业执照;3是社会信用</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>licenseNo</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>证件号码</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>licenseBeginDate</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>date</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>证件有效开始日期</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>licenseEndDate</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>date</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>证件有效结束日期</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>certificateCode</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>组织机构代码</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>taxNo</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>税务登记证编号</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>corporationName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>企业法人</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>corporationIdCardNo</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>法人身份证号</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>contactName</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>联系人</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>contactPhone</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>联系电话</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>contactEmail</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>联系邮箱</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>needBalance</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>boolean</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t></w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -588,7 +1808,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行省份ID</w:t>
+				<w:t>开户行所在省份ID</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -649,7 +1869,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行省份名称</w:t>
+				<w:t>开户行所在省份名称</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -710,7 +1930,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行城市ID</w:t>
+				<w:t>开户行所在城市ID</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -771,7 +1991,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行城市名称</w:t>
+				<w:t>开户行所在城市名称</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -832,7 +2052,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行分支行ID</w:t>
+				<w:t>分支行ID</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -893,7 +2113,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t>开户行分支行名称</w:t>
+				<w:t>分支行名称</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -977,311 +2197,6 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>createTime</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>date</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>创建时间</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
-				<w:t>createUser</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>string</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>创建用户</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
-				<w:t>updateTime</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>date</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>更新时间</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
-				<w:t>updateUser</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>string</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>更新用户</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
-				<w:t>isDelete</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>boolean</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>是否删除</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
 				<w:t>status</w:t>
 			</w:r>
 		</w:p>
@@ -1343,68 +2258,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>syncSysCode</w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2689" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t>int</w:t>
-			</w:r>
-			<w:bookmarkStart w:id="0" w:name="_GoBack" />
-			<w:bookmarkEnd w:id="0" />
-		</w:p>
-	</w:tc>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="2769" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
-			<w:pPr>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-			</w:pPr>
-			<w:r>
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-				</w:rPr>
-				<w:t></w:t>
-			</w:r>
-		</w:p>
-	</w:tc>
-</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
-	<w:trPr>
-		<w:trHeight w:val="242" />
-	</w:trPr>
-	<w:tc>
-		<w:tcPr>
-			<w:tcW w:w="3064" w:type="dxa" />
-		</w:tcPr>
-		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
-			<w:pPr>
-				<w:rPr>
-					<w:szCs w:val="21" />
-				</w:rPr>
-			</w:pPr>
-			<w:r w:rsidRPr="000046BF">
-				<w:rPr>
-					<w:rFonts w:hint="eastAsia" />
-					<w:szCs w:val="21" />
-				</w:rPr>
-				<w:t>remark</w:t>
+				<w:t>parentId</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -1442,7 +2296,251 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t></w:t>
+				<w:t>父机构ID</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>hierarchy</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>int</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>机构层级</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>createUser</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>string</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>创建人</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>agencyPicListCollection</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>AgencyPicListCollection</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>机构相关照片List集合</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr><w:tr w:rsidR="000046BF" w:rsidTr="001A39C7">
+	<w:trPr>
+		<w:trHeight w:val="242" />
+	</w:trPr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="3064" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRPr="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:szCs w:val="21" />
+				</w:rPr>
+			</w:pPr>
+			<w:r w:rsidRPr="000046BF">
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+					<w:szCs w:val="21" />
+				</w:rPr>
+				<w:t>agencyPicIdCollection</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2689" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="001A39C7">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>AgencyPicIdCollection</w:t>
+			</w:r>
+			<w:bookmarkStart w:id="0" w:name="_GoBack" />
+			<w:bookmarkEnd w:id="0" />
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:w="2769" w:type="dxa" />
+		</w:tcPr>
+		<w:p w:rsidR="000046BF" w:rsidRDefault="000046BF" w:rsidP="000046BF">
+			<w:pPr>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" />
+				</w:rPr>
+				<w:t>机构相关照片ID集合</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>

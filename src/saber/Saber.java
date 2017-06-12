@@ -49,7 +49,7 @@ public class Saber {
 		float a = 1.0f;
 		int b = 1;
 		System.out.println(a - b);
-		Class intClass = int.class;
+		Class<?> intClass = int.class;
 		intClass = double.class;
 		System.out.println(intClass.getName());
 		intClass = Saber.class;

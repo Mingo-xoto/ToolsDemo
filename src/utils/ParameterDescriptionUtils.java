@@ -7,7 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -25,6 +27,9 @@ public class ParameterDescriptionUtils {
 	final static String ROOTPATH = "E:/workspace1/saber/src/file";
 	final static int DIFFERENCE = 'A' - 'a';
 
+	private static List<String[]> childBeans = new ArrayList<String[]>();
+	private static Map<String, String> dtoNameMap = new HashMap<>();
+
 	public static Template getTemplate(String name) {
 		try {
 			File file = new File(ROOTPATH);
@@ -38,6 +43,14 @@ public class ParameterDescriptionUtils {
 		return null;
 	}
 
+	/**
+	 * freemarker模板生成文件
+	 * 
+	 * @param name
+	 * @param map
+	 * @param outFile
+	 * @return
+	 */
 	public static String fprint(String name, Map<String, Object> map, String outFile) {
 		FileWriter out = null;
 		String buffer = null;
@@ -62,11 +75,67 @@ public class ParameterDescriptionUtils {
 		return buffer;
 	}
 
-	public static void main(String[] args) throws IOException {
-		createReturnDataStructor("E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/manage/", "ServiceProviderDto.java");
+	public static void listFile(File file) {
+		if (file.isDirectory()) {
+			File files[] = file.listFiles();
+			for (File f : files) {
+				listFile(f);
+			}
+		} else {
+			dtoNameMap.put(file.getName().split("\\.")[0], file.getParent() + File.separator);
+		}
+
 	}
 
-	public static void createReturnDataStructor(String rp, String dtoName) throws IOException, FileNotFoundException {
+	public static void main(String[] args) throws IOException {
+		final String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
+		createDataStructor(path + "manage/", "AgencyDetailDto.java");
+		if (childBeans.size() > 0) {
+			createInRecursion();
+		}
+	}
+
+	/**
+	 * 递归生成dto属性注释：dto属性也为自定义dto类
+	 * 
+	 * @throws IOException
+	 * @throws FileNotFoundException
+	 */
+	private static void createInRecursion() throws IOException, FileNotFoundException {
+		List<String[]> childBeans = ParameterDescriptionUtils.childBeans;
+		ParameterDescriptionUtils.childBeans = new ArrayList<String[]>();
+		for (String childBean[] : childBeans) {
+			System.out.println(childBean[0] + ":" + childBean[1]);
+			createSingleDataStructor(childBean[1], childBean[0] + ".java");
+		}
+		if (childBeans.size() > 0) {
+			createInRecursion();
+		}
+	}
+
+	/**
+	 * 生成dto属性注释文档
+	 * 
+	 * @param path
+	 * @param dto
+	 * @throws IOException
+	 * @throws FileNotFoundException
+	 */
+	public static void createDataStructor(String path, String dto) throws IOException, FileNotFoundException {
+		File dir = new File(path);
+		listFile(dir);
+		createSingleDataStructor(path, dto);
+	}
+
+	/**
+	 * 生成单一dto属性注释文档
+	 * 
+	 * @param rp
+	 * @param dtoName
+	 * @throws IOException
+	 * @throws FileNotFoundException
+	 */
+	public static void createSingleDataStructor(String rp, String dtoName) throws IOException, FileNotFoundException {
 		String path = rp + dtoName;
 		// 读取从数据库导出的表字段注释
 		StringBuilder trs = readFullPropertyListOfBean(rp, path);
@@ -74,45 +143,113 @@ public class ParameterDescriptionUtils {
 		map.put("trs", trs.toString());
 		// 1、创建数据模型
 		// 3、将数据模型和模板组合的数据输出到控制台
-		fprint("ParameterDescription.ftl", map, "返回参数.doc");
+		fprint("ParameterDescription.ftl", map, dtoName.split("\\.")[0] + ".doc");
 	}
 
 	public static StringBuilder readFullPropertyListOfBean(String rp, String path) throws FileNotFoundException, IOException {
-		String line = null;
-		// 读取返回实体dto的字段列表
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 		StringBuilder trs = new StringBuilder();
+		readPropertyLine(br, trs);
+		br.close();
+		return trs;
+	}
+
+	/**
+	 * 读取属性行
+	 * 
+	 * @param br
+	 * @param trs
+	 * @throws IOException
+	 */
+	private static void readPropertyLine(BufferedReader br, StringBuilder trs) throws IOException {
+		String line;
 		while ((line = br.readLine()) != null) {
 			line = line.trim();
 			// 只筛选字段行
 			if ((line.startsWith("private") || line.startsWith("public")) && !line.endsWith("{") && line.indexOf("=") < 0) {
-				System.out.print(line);
 				String arrs[] = line.split(" ");
 				Map<String, Object> map = new HashMap<String, Object>();
 				// 2、为数据模型添加值
 				String property = arrs[2].split(";")[0];
 				map.put("property", property);
-				map.put("type", getType(arrs[1]));
+				map.put("type", matchUserDefinedBean(arrs[1]));
 				map.put("description", arrs.length > 3 ? arrs[3] : "");
 				trs.append(fprint("tr.ftl", map, "tr_new.ftl"));
+				// BufferedReader n_br =
+				// getReaderAfterMatchUserDefinedBean(type);
+				// if (n_br != null) {
+				// readPropertyLine(n_br, trs);
+				// }
 			}
 		}
-		br.close();
-		return trs;
+	}
+
+	@SuppressWarnings("unused")
+	private static BufferedReader getReaderAfterMatchUserDefinedBean(String type) throws FileNotFoundException {
+		for (String beanName : variableDetection(type)) {
+			if (dtoNameMap.containsKey(beanName)) {
+				String dtoPath = dtoNameMap.get(beanName) + beanName + ".java";
+				dtoNameMap.remove(beanName);
+				return new BufferedReader(new InputStreamReader(new FileInputStream(new File(dtoPath))));
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * 匹配是否为用户自定义类
+	 * 
+	 * @param type
+	 */
+	private static String matchUserDefinedBean(String type) {
+		String finalType = getType(type);
+		for (String beanName : variableDetection(type)) {
+			if (dtoNameMap.containsKey(beanName)) {
+				childBeans.add(new String[] { beanName, dtoNameMap.get(beanName) });
+				// // 同一个dto（只以dto名称作为标记）只作一次输出
+				// dtoNameMap.remove(beanName);
+				if (beanName.toLowerCase().equals(finalType)) {
+					return beanName;
+				} else {
+					return beanName + "对象" + finalType;
+				}
+			}
+		}
+		return finalType;
+	}
+
+	/**
+	 * 变量检测
+	 * 
+	 * @param type
+	 * @return
+	 */
+	private static List<String> variableDetection(String type) {
+		List<String> beanNames = new ArrayList<String>();
+		StringBuilder word = new StringBuilder();
+		for (int i = 0, length = type.length(); i < length; ++i) {
+			char letter = type.charAt(i);
+			// 满足为变量命名规则：首字母是英文字母、$和下划线，由字母、数字和下划线组成
+			if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z') || letter == '_' || letter == '$' || (letter <= 9 && letter >= 0)) {
+				word.append(letter);
+			} else {
+				beanNames.add(word.toString());
+				word = new StringBuilder();
+			}
+		}
+		beanNames.add(word.toString());
+		return beanNames;
 	}
 
 	public static String getType(String type) {
 		String finalType = "";
 		switch (type) {
 		case "Short":
-			;
 		case "Byte":
-			;
 		case "Integer":
-			finalType = "int";
-			break;
+			return "int";
 		default:
 			finalType = type.toLowerCase();
 			finalType = finalType.replaceAll("<[a-zA-Z]+>", "");

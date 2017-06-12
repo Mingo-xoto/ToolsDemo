@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Entity2Dto {
 
-	final static String entityName = "ServiceProvider";
+	final static String entityName = "SysUser";
 	final static String fileType = ".java";
 	final static String dtoPackage = "cn#paywe#fos#api#dto#manage";
 	final static String entityPackage = "cn#paywe#fos#api#repository#manage#entity#";
@@ -75,12 +75,10 @@ public class Entity2Dto {
 			File dir = new File(dtoPath);
 			TableUtils.listFile(dir, tableInfoMap);
 			// 生成接口文档返回参数列表
-			ParameterDescriptionUtils.createReturnDataStructor(dtoPath, getDtoFileName());
+			ParameterDescriptionUtils.createDataStructor(dtoPath, getDtoFileName());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

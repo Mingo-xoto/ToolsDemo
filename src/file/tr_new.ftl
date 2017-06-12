@@ -17,7 +17,7 @@
 					<w:rFonts w:hint="eastAsia" />
 					<w:szCs w:val="21" />
 				</w:rPr>
-				<w:t>remark</w:t>
+				<w:t>oasConnectorId</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
@@ -55,7 +55,7 @@
 				<w:rPr>
 					<w:rFonts w:hint="eastAsia" />
 				</w:rPr>
-				<w:t></w:t>
+				<w:t>OAS关系人ID</w:t>
 			</w:r>
 		</w:p>
 	</w:tc>
