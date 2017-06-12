@@ -89,7 +89,7 @@ public class ParameterDescriptionUtils {
 
 	public static void main(String[] args) throws IOException {
 		final String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
-		createDataStructor(path + "manage/", "AgencyDetailDto.java");
+		createDataStructor(path + "manage/", "MerchantContractDto.java");
 		if (childBeans.size() > 0) {
 			createInRecursion();
 		}
@@ -172,10 +172,16 @@ public class ParameterDescriptionUtils {
 				String arrs[] = line.split(" ");
 				Map<String, Object> map = new HashMap<String, Object>();
 				// 2、为数据模型添加值
-				String property = arrs[2].split(";")[0];
+				String infos[] = arrs[2].split(";");
+				String property = infos[0];
 				map.put("property", property);
 				map.put("type", matchUserDefinedBean(arrs[1]));
-				map.put("description", arrs.length > 3 ? arrs[3] : "");
+				String description = arrs.length > 3 ? arrs[arrs.length - 1] : "";
+				if ("".equals(description)) {
+					map.put("description", infos.length > 1 ? infos[1].replaceAll("//", "") : "");
+				} else {
+					map.put("description", description);
+				}
 				trs.append(fprint("tr.ftl", map, "tr_new.ftl"));
 				// BufferedReader n_br =
 				// getReaderAfterMatchUserDefinedBean(type);
