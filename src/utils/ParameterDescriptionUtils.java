@@ -30,6 +30,16 @@ public class ParameterDescriptionUtils {
 	private static List<String[]> childBeans = new ArrayList<String[]>();
 	private static Map<String, String> dtoNameMap = new HashMap<>();
 
+	public static void main(String[] args) throws IOException {
+		final String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
+		StringBuilder trs = new StringBuilder();
+		trs.append(createDataStructor(path + "manage/", "AgencyDetailDto.java"));
+		if (childBeans.size() > 0) {
+			createInRecursion(trs);
+		}
+		printFile("AgencyDetailDto.java", trs.toString());
+	}
+
 	public static Template getTemplate(String name) {
 		try {
 			File file = new File(ROOTPATH);
@@ -87,12 +97,8 @@ public class ParameterDescriptionUtils {
 
 	}
 
-	public static void main(String[] args) throws IOException {
-		final String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
-		createDataStructor(path + "manage/", "MerchantContractDto.java");
-		if (childBeans.size() > 0) {
-			createInRecursion();
-		}
+	public static void addTitle(StringBuilder trs) {
+		trs.append(getTemplate("title.ftl").toString());
 	}
 
 	/**
@@ -101,16 +107,24 @@ public class ParameterDescriptionUtils {
 	 * @throws IOException
 	 * @throws FileNotFoundException
 	 */
-	private static void createInRecursion() throws IOException, FileNotFoundException {
+	private static String createInRecursion(StringBuilder trs) throws IOException, FileNotFoundException {
 		List<String[]> childBeans = ParameterDescriptionUtils.childBeans;
 		ParameterDescriptionUtils.childBeans = new ArrayList<String[]>();
 		for (String childBean[] : childBeans) {
-			System.out.println(childBean[0] + ":" + childBean[1]);
-			createSingleDataStructor(childBean[1], childBean[0] + ".java");
+			if (dtoNameMap.containsKey(childBean[0])) {
+				trs.append("</w:tbl><w:p w:rsidR=\"007A2174\" w:rsidRDefault=\"007A2174\"><w:r><w:rPr><w:rFonts w:hint=\"eastAsia\" /></w:rPr><w:t>");
+				trs.append(childBean[0]+":");
+				addTitle(trs);
+				trs.append(readFullPropertyListOfBean(childBean[1], childBean[0] + ".java"));
+			}
+			// 同一个dto属性信息只输出一次
+			dtoNameMap.remove(childBean[0]);
 		}
 		if (childBeans.size() > 0) {
-			createInRecursion();
+
+			createInRecursion(trs);
 		}
+		return trs.toString();
 	}
 
 	/**
@@ -121,10 +135,10 @@ public class ParameterDescriptionUtils {
 	 * @throws IOException
 	 * @throws FileNotFoundException
 	 */
-	public static void createDataStructor(String path, String dto) throws IOException, FileNotFoundException {
+	public static String createDataStructor(String path, String dto) throws IOException, FileNotFoundException {
 		File dir = new File(path);
 		listFile(dir);
-		createSingleDataStructor(path, dto);
+		return readFullPropertyListOfBean(path, dto);
 	}
 
 	/**
@@ -135,10 +149,20 @@ public class ParameterDescriptionUtils {
 	 * @throws IOException
 	 * @throws FileNotFoundException
 	 */
-	public static void createSingleDataStructor(String rp, String dtoName) throws IOException, FileNotFoundException {
-		String path = rp + dtoName;
+	public static String createSingleDataStructor(String rp, String dtoName) throws IOException, FileNotFoundException {
 		// 读取从数据库导出的表字段注释
-		StringBuilder trs = readFullPropertyListOfBean(rp, path);
+		String trs = readFullPropertyListOfBean(rp, dtoName);
+		printFile(dtoName, trs);
+		return trs;
+	}
+
+	/**
+	 * 输出文件
+	 * 
+	 * @param dtoName
+	 * @param trs
+	 */
+	private static void printFile(String dtoName, String trs) {
 		Map<String, Object> map = new HashMap<>();
 		map.put("trs", trs.toString());
 		// 1、创建数据模型
@@ -146,14 +170,15 @@ public class ParameterDescriptionUtils {
 		fprint("ParameterDescription.ftl", map, dtoName.split("\\.")[0] + ".doc");
 	}
 
-	public static StringBuilder readFullPropertyListOfBean(String rp, String path) throws FileNotFoundException, IOException {
+	public static String readFullPropertyListOfBean(String rp, String dtoName) throws FileNotFoundException, IOException {
+		String path = rp + dtoName;
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 		StringBuilder trs = new StringBuilder();
 		readPropertyLine(br, trs);
 		br.close();
-		return trs;
+		return trs.toString();
 	}
 
 	/**
@@ -214,8 +239,6 @@ public class ParameterDescriptionUtils {
 		for (String beanName : variableDetection(type)) {
 			if (dtoNameMap.containsKey(beanName)) {
 				childBeans.add(new String[] { beanName, dtoNameMap.get(beanName) });
-				// // 同一个dto（只以dto名称作为标记）只作一次输出
-				// dtoNameMap.remove(beanName);
 				if (beanName.toLowerCase().equals(finalType)) {
 					return beanName;
 				} else {
