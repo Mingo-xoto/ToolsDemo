@@ -26,18 +26,19 @@ import freemarker.template.TemplateException;
 public class ParameterDescriptionUtils {
 	final static String ROOTPATH = "E:/workspace1/saber/src/file";
 	final static int DIFFERENCE = 'A' - 'a';
+	final static String dtoName = "AgencyDetailDto.java";
+	final static String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/manage/";
 
 	private static List<String[]> childBeans = new ArrayList<String[]>();
 	private static Map<String, String> dtoNameMap = new HashMap<>();
 
 	public static void main(String[] args) throws IOException {
-		final String path = "E:/Git/MyRepository/fos-api-item/fos-api-beans/src/main/java/cn/paywe/fos/api/dto/";
 		StringBuilder trs = new StringBuilder();
-		trs.append(createDataStructor(path + "manage/", "AgencyDetailDto.java"));
+		trs.append(createDataStructor(path, dtoName));
 		if (childBeans.size() > 0) {
 			createInRecursion(trs);
 		}
-		printFile("AgencyDetailDto.java", trs.toString());
+		printFile(dtoName, trs.toString());
 	}
 
 	public static Template getTemplate(String name) {
@@ -66,7 +67,7 @@ public class ParameterDescriptionUtils {
 		String buffer = null;
 		try {
 			// 通过一个文件输出流，就可以写到相应的文件中
-			out = new FileWriter(new File(ROOTPATH + "/" + outFile));
+			out = new FileWriter(new File(ROOTPATH + File.separator + outFile));
 			Template temp = getTemplate(name);
 			temp.process(map, out);
 			buffer = getTemplate(outFile).toString();
@@ -113,7 +114,7 @@ public class ParameterDescriptionUtils {
 		for (String childBean[] : childBeans) {
 			if (dtoNameMap.containsKey(childBean[0])) {
 				trs.append("</w:tbl><w:p w:rsidR=\"007A2174\" w:rsidRDefault=\"007A2174\"><w:r><w:rPr><w:rFonts w:hint=\"eastAsia\" /></w:rPr><w:t>");
-				trs.append(childBean[0]+":");
+				trs.append(childBean[0] + ":");
 				addTitle(trs);
 				trs.append(readFullPropertyListOfBean(childBean[1], childBean[0] + ".java"));
 			}
